@@ -8,7 +8,8 @@ Working repository for the AIPR 2026 manuscript (Springer LNCS proceedings, fina
 |---|---|
 | `paper/` | Draft 1: full paper in LNCS format with corrected numbers (Introduction, Related Work, Method, Experiments, Discussion, Conclusion, appendices). Build instructions in `paper/README.md`. |
 | `paper2/` | Draft 2: slide-sequence outline in LNCS format using the deck's own numbers. |
-| `draft-1/main.pdf`, `draft-2/main-v2.pdf` | Compiled PDFs of the two drafts. |
+| `paper3/` | Draft 3: draft 1's structure, notation and bibliography with the talk's narrative and imagery, compressed toward a short-paper length. Build instructions in `paper3/README.md`. |
+| `draft-1/main.pdf`, `draft-2/main-v2.pdf`, `draft-3/main.pdf` | Compiled PDFs of the three drafts. |
 | `review/` | Analyses of the source material: slide-by-slide breakdown, Shrey's answers, working assumptions and their status, leakage measurement. |
 | `review/images/` | Images extracted from the deck (videos are excluded from the repo by `.gitignore`). |
 | `technical-details.md` | Every number used in the drafts, with source and confidence. |

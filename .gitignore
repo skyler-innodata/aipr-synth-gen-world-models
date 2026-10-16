@@ -14,6 +14,7 @@
 # LaTeX build output (regenerable)
 paper/build/
 paper2/build/
+paper3/build/
 *.aux
 *.bbl
 *.blg
