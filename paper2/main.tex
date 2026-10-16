@@ -1,0 +1,46 @@
+% Draft 2: slide-sequence outline in Springer LNCS format (AIPR 2026).
+% Follows the presentation order slide by slide. Numbers are the deck's numbers.
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt}
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\lstset{basicstyle=\ttfamily\scriptsize, breaklines=true, columns=fullflexible, frame=single}
+\graphicspath{{figures/}}
+
+% Slide pointer shown in the margin-free style LNCS allows: small grey tag at section start.
+\newcommand{\slides}[1]{\noindent{\footnotesize\textcolor{black!55}{[Slides #1]}}\par\vspace{2pt}}
+
+\begin{document}
+
+\title{Synthetic Video Generation for Robot Learning Using World Foundation Models}
+\titlerunning{Synthetic Video Generation for Robot Learning}
+
+\author{Shrey Jha \and Skyler Saucedo \and Frank Tanner}
+\authorrunning{S. Jha et al.}
+\institute{Innodata Inc.\\ \email{xxx@innodata.com}}
+
+\maketitle
+
+\begin{abstract}
+A robot policy trained on a few hours of egocentric household video sees one counter, one bucket, one lighting condition, and cannot be expected to generalize beyond them. We describe a multi-model pipeline built on NVIDIA Cosmos that turns a small real video dataset into a large set of synthetic training clips by varying appearance while preserving the recorded actions. Cosmos Reason produces a structured ontology of each scene: the task, the objects and their roles, and physically grounded variations for each object. A language model turns the ontology into generation prompts and filters implausible variations, yielding about 70 candidates per 15-second clip. Edge, depth, color and segmentation maps, together with a subtraction mask that isolates the surface to be changed, guide Cosmos Transfer to render the variant. Appearance changes work for simpler scenes; complex, multi-texture scenes and action-level changes remain unsolved. From 116 clips the pipeline could produce about 8,120 variants at negligible language-model cost. Whether synthetic appearance data alone makes a robot more robust, or whether action generation must be solved first, is the question the work leaves open.
+
+\keywords{Synthetic data \and World foundation models \and NVIDIA Cosmos \and Egocentric video \and Robot learning.}
+\end{abstract}
+
+\input{sections/outline}
+
+\bibliographystyle{splncs04}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,11 @@
+frames: 60
+mask_frac_mean: 0.4978
+dE_in_mean: 75.46122741699219
+dE_in_std_over_frames: 4.0360
+dE_out_mean: 34.83407974243164
+dE_out_std_over_frames: 7.1953
+dC_in_mean: 68.2118
+dC_out_mean: 24.1511
+ratio_out_over_in: 0.46161559224128723
+frac_outside_pixels_dE_gt10: 0.9454
+frac_outside_pixels_dE_gt20: 0.6526

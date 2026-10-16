@@ -1,0 +1,34 @@
+# Archives
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Large source media (the deck is 37 MB; videos are up to 10 MB each)
+*.pptx
+*.ppt
+*.mp4
+*.mov
+*.wdp
+
+# LaTeX build output (regenerable)
+paper/build/
+paper2/build/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# Superseded compiled draft (current one is draft-2/main-v2.pdf)
+draft-2/main.pdf
+draft-2/main.log
+
+# OS and editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

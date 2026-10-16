@@ -1,0 +1,116 @@
+\section{Reasoning prompt and ontology schema}
+\label{app:prompt}
+The instruction given to the Cosmos 3 Nano reasoning tower, abridged to the schema. The full text is available from the authors.
+
+\begin{lstlisting}
+You are an expert robotics training data analyst with precise spatial grounding.
+Analyze this egocentric image of a person performing a household task.
+Your goals:
+1. Identify the most task-relevant objects in the scene (up to 10).
+2. Provide a precise 2D bounding box for each object
+   ("bbox_2d": [x1, y1, x2, y2], normalized 0-1000).
+3. Enumerate EVERY possible variation for synthetic data generation.
+
+OUTPUT FORMAT (JSON):
+{ "location": {room_type, setting, time_of_day, lighting_condition, room_style},
+  "task": {name, description, phase, action_primitive, difficulty,
+           typical_duration_seconds},
+  "key_objects": [{ rank, name, bbox_2d, is_primary, role_in_task,
+      "current_appearance": {color_description, rgb, hex, material, texture,
+                             condition, size_estimate},
+      "current_state": {position_on_surface, height_above_surface, orientation,
+                        interaction_state, task_completion_phase},
+      "variations": {color_and_appearance, material_and_texture, size_and_shape,
+                     state_and_position, condition, interaction, brand_and_style},
+      "robustness_gaps": {what_robot_must_handle, common_failure_modes, edge_cases} }],
+  "scene_variations": {lighting, camera_viewpoint, room_style_and_culture,
+                       time_of_day, background_clutter, person_characteristics,
+                       task_sequence_variations},
+  "dataset_gaps": {what_current_clip_shows, what_is_missing,
+                   highest_priority_variations} }
+
+Answer in the following format:
+<think> your reasoning </think>
+<answer> your JSON here </answer>
+\end{lstlisting}
+
+\section{Plausibility filter instruction}
+\label{app:filter}
+The instruction given to GPT-4o mini together with the ontology JSON. It filters variations and requests structured prompt entries; the entries are then rewritten as free-text Transfer prompts by the instruction in Appendix~\ref{app:writer}.
+
+\begin{lstlisting}
+Here is the variation ontology for a household task clip:
+{ontology_json}
+Generate a comprehensive set of video generation prompts for Cosmos 3.
+CRITICAL: The "prompt" field in each prompt entry must be a complete structured JSON object matching the Cosmos 3 caption schema -- NOT a plain text paragraph.
+CRITICAL -- PLAUSIBILITY FILTER: Before including any variation, evaluate it against these real-world plausibility checks. REJECT the variation if ANY apply:
+1. Material-task incompatibility: The proposed material cannot physically support the task's contact forces (e.g., a glass countertop for heavy scrubbing, a paper shelf holding books).
+2. Object-size violation: The proposed object size would not fit the spatial constraints of the scene (e.g., an industrial-sized bucket on a small countertop).
+3. Material-environment mismatch: The material would not realistically exist in the environment type (e.g., outdoor gravel flooring in a kitchen, marble countertops in a garage workshop).
+4. Physics contradiction: The variation requires physical behavior the real world does not permit (e.g., a towel standing rigid, water flowing upward).
+5. Temporal/lighting inconsistency: The proposed lighting contradicts the time of day or environment (e.g., harsh sunset light in a windowless room).
+6. Nonexistent or implausible object: The variation introduces an object that would not plausibly be found in this scene type (e.g., a fire hydrant on a bedroom nightstand).
+For each variation you INCLUDE, add a one-line "plausibility_rationale" field explaining why this scenario is observable in a real household. For any variation you REJECT, do not include it in the output -- silently skip it.
+Prioritize variations that maximize diversity across the robustness gaps identified in the ontology while remaining grounded in real-world household environments.
+\end{lstlisting}
+
+\section{Prompt-writer instruction}
+\label{app:writer}
+The system instruction given to GPT-4o mini to turn an accepted variation into a Cosmos Transfer prompt.
+
+\begin{lstlisting}
+You are an expert at writing prompts for NVIDIA Cosmos Transfer 2.5, a video-to-video model that transforms input videos based on text descriptions. Given a scene description and a specific variation to apply, write a detailed prompt that describes the ENTIRE scene as it should appear AFTER the transformation.
+Rules:
+1. Describe the changed object in vivid detail: color, material, texture, finish.
+2. Explicitly state that all OTHER objects retain their original appearance.
+3. Describe the lighting and camera angle as they are in the original.
+4. Repeat the target color/material 2-3 times in different contexts to reinforce it.
+5. Keep the prompt under 300 words.
+6. Do NOT use phrases like "transform" or "change" -- describe the scene as if it already looks the way you want.
+7. Be specific about materials: "smooth matte blue finish" not just "blue".
+Example output format: "The video captures a person cleaning a solid blue countertop in a well-lit indoor kitchen. [...] The bucket and paper towels retain their original appearance. The room is lit by bright, even overhead ceiling lights that illuminate the blue countertop uniformly."
+\end{lstlisting}
+
+\section{Generation prompts}
+\label{app:prompts}
+Prompts written by GPT-4o mini for the Transfer renders in Sec.~\ref{sec:appearance}, followed by the Predict2 prompts of Sec.~\ref{sec:actionresults}.
+
+\paragraph{Counter wiping, blue countertop (Fig.~\ref{fig:bucket})}
+\begin{quote}\small
+The video captures a person cleaning a solid blue countertop in a well-lit indoor kitchen. The countertop surface is a rich, vivid blue color with a smooth matte finish, clearly visible under the even overhead lighting. The person uses paper towels and a bucket to wipe down the blue countertop surface. The bucket and paper towels retain their original appearance. The walls and surrounding cabinets are neutral colors. The room is lit by bright, even overhead ceiling lights that illuminate the blue countertop uniformly. The camera captures the scene from a close angle, focused on the person's hands and the countertop surface.
+\end{quote}
+
+\paragraph{Cable wrapping, blue desk and shelf (Fig.~\ref{fig:others}b)}
+\begin{quote}\small
+The video captures a person standing at a solid blue painted desk in a well-lit indoor room. The desk surface is a rich, vivid blue color with a smooth matte finish, clearly visible under the even overhead lighting. A matching blue shelf is mounted on the wall above the desk, also painted the same vivid blue. The person holds a white charger cable in both hands and wraps it carefully. The walls of the room are a neutral light color. The room is lit by bright, even overhead ceiling lights that illuminate the blue furniture uniformly. The camera captures the scene from a close angle, focused on the person's hands and the desk surface.
+\end{quote}
+
+\paragraph{Cable wrapping, white desk with oak shelf (no figure)}
+\begin{quote}\small
+The video captures a person standing at a clean, modern desk in a well-lit contemporary indoor room. The desk has a smooth matte white laminate surface with minimalist straight edges and slim tapered legs. A sleek modern floating shelf is mounted on the wall above the desk, made of light natural oak wood with a clear satin finish, clean straight lines, and concealed mounting hardware giving it a seamless floating appearance. The person holds a white charger cable in both hands and wraps it carefully. The walls are painted a soft warm white. The room is lit by bright, even overhead ceiling lights that cast a clean, shadow-free illumination across the furniture surfaces. The camera captures the scene from a close angle, focused on the person's hands and the desk surface.
+\end{quote}
+
+\paragraph{Cloth folding, cobalt blanket (Fig.~\ref{fig:pillow})}
+\begin{quote}\small
+The video captures a person folding a white cloth on a neatly made bed in a well-lit bedroom. A folded blanket rests on the left side of the bed, made of soft fabric in a rich, vivid cobalt blue color with a smooth matte finish. The blue blanket is neatly folded and sits prominently on the white bedding. The white cloth being folded, the decorative pillow with yellow and black patterns, the dark wooden headboard, and the brass decorative item all retain their original colors and appearance. The room is lit by bright, even indoor lighting.
+\end{quote}
+
+\paragraph{Cloth folding, chunky cream knit blanket (no figure)}
+\begin{quote}\small
+The video captures a person folding a white cloth on a neatly made bed in a well-lit bedroom. A folded throw blanket rests on the left side of the bed, made of thick, chunky hand-knitted wool in a warm cream color with a clearly visible cable-knit pattern and a cozy, textured three-dimensional weave. The knitted throw has a soft, plush appearance with visible yarn stitches and a handcrafted rustic aesthetic. The white cloth being folded, the decorative pillow, the dark wooden headboard, and the brass decorative item all retain their original appearance. The room is lit by bright, even indoor lighting.
+\end{quote}
+
+\paragraph{Bed making, navy rug (Fig.~\ref{fig:others}c)}
+\begin{quote}\small
+The video captures a person making a bed by smoothing a beige bedspread in a bright bedroom. On the floor beside the bed is a simple solid navy blue area rug with a flat woven texture and clean straight edges. The bedspread, the person's hands, and the bed retain their original appearance. The room is lit by bright indoor lighting.
+\end{quote}
+
+\paragraph{Predict2, paper rotation (Sec.~\ref{sec:actionresults})}
+\begin{quote}\small
+The video opens with a person standing at a desk in a warmly lit indoor room. On top of the desk, there exists a to do this week paper with 3 black objects lying on top of the paper. In the person's hands, there is a white charger and cable. The left hand holds the cable that is attached to the charger block held in the right hand. As the video progresses, the cable and charger are held still, fully occupying the person's hands. In the second frame, the paper goes from its initial position to a full 90 degrees rotation. After which the frames stay the same as the initial frame. The 3 black objects maintain their relative position on the paper as the paper rotates with no slipping and sliding off. At the end of the video, the paper has turned 90 degrees to the right from initial positions. The person's hands are still fully occupied with the charger and cable as seen in the initial frame.
+\end{quote}
+
+\paragraph{Predict2, cable wrapping (Fig.~\ref{fig:predict})}
+\begin{quote}\small
+The video opens with a person standing at a desk in a warmly lit indoor room. A white charger cable hangs loosely between the person's two hands. The left hand grips the charger block firmly, holding it completely still, anchoring it in place. The right hand holds the loose end of the cable, ready to begin wrapping. As the video progresses, the left hand remains locked in place as a fixed pivot point. The right hand moves slowly and gradually, looping the cable around the charger block one wrap at a time. The cable moves in a circular like motion around the charger block held in the left hand forming concentric circulars near the charger block which serves as an axis of rotation. For reference, the motion is exactly that of the input frames. The cable follows the rotation of the right wrist exactly, bending and curving through the air as it is dragged in a continuous loop. The cable remains taut between the fingers and the charger block at all times, never going slack or floating free. The cable stays physically connected to both the charger block and the wrapping hand throughout, never detaching or disappearing from view. By the end of the video, the cable is fully wound into a tight coil, every loop visibly connected and continuous. The left hand releases its grip, and the person sets the bundled charger down onto the shelf above the desk.
+\end{quote}

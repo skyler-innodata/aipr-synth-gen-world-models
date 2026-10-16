@@ -1,0 +1,57 @@
+% Springer LNCS template, as required by AIPR 2026 (proceedings in LNCS).
+% Compile with pdflatex + bibtex (splncs04). Overleaf: Menu -> Compiler: pdfLaTeX.
+% AIPR 2026 sets no page limit for the manuscript (confirmed 2026-10-16). Working target about 20 pages.
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{siunitx}
+\sisetup{detect-all}
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+% Draft markers. Delete this block before submission; no marker may remain.
+\newcommand{\verify}[1]{\textcolor{red}{[VERIFY: #1]}}
+\newcommand{\citeneeded}{\textcolor{red}{[CITATION NEEDED]}}
+
+\lstset{basicstyle=\ttfamily\scriptsize, breaklines=true, columns=fullflexible, frame=single}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\title{Ontology-Guided Appearance Variation of Egocentric Manipulation Video with World Foundation Models}
+\titlerunning{Ontology-Guided Appearance Variation of Egocentric Video}
+
+\author{Shrey Jha \and Skyler Saucedo \and Frank Tanner}
+\authorrunning{S. Jha et al.}
+
+\institute{Innodata Inc.\\
+\email{xxx@innodata.com}}
+
+\maketitle
+
+\input{sections/abstract}
+
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\appendix
+\input{sections/appendix}
+
+\bibliographystyle{splncs04}
+\bibliography{refs}
+
+\end{document}
