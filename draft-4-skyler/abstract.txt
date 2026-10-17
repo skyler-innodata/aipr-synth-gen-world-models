@@ -1,0 +1,26 @@
+Advancements in humanoid robotics and robotic maniuplation policies are bottlenecked by the limited availablity of realworld data to achieve acceptable task completion scores.
+
+We describe a pipeline on NVIDIA Cosmos that produces appearance variants of real clips while keeping the recorded actions. 
+
+our multi-model pipeline turns a smal real dataset into thousands of syntetic training clips. 
+
+And while permuting attributes within the Ontology of the scene provides the diversity needed for effective robot policy training, complex scenes and action-level changes remain unsolved.
+
+In this paper, we provide a primer that describes our process and findings, where structured reasoning about a scene produces robust realistic permutions. 
+
+We also outline best practices and limitations for employing this process, demonstrating that this powerful and economical aproach is scalable when solving problems in robot learning. 
+
+---- Updated -----
+
+Training successful robotic maniuplation policies within the space of PhysicalAI are bottlenecked by real-world data. 
+Achieving acceptable completion scores for even the most straightforward tasks costs tens of thousands of hours of egocentric data, 
+needed sufficient diversity for different objects, surfaces, and lighting. 
+
+We describe a  pipeline that leverages Vision-Action-language models like NVIDIA Cosmos, along with OpenAI's mini-4o that produces 
+variants of real egocentric clips while keeping the recorded actions, scaling a single video into hundreds of permutiations. 
+We begin by using NVIDIA Cosmos 3 Nano to produce the Onotolgy of each clip, the task of each object's role, and plausable variations. 
+We use Mini-4o to write our prompt, Segment Anything SAM2 generates image segmentaiton masks on the objects we wish to permute, while Cosmos 
+Transfer 2.5 renders the items maintaing realism within the video. 
+
+In this paper, we provide a primer that describes our process and findings, where structured reasoning about a scene produces robust realistic permutions. 
+We also outline best practices and limitations for employing this process, demonstrating that this powerful and economical aproach is scalable when solving problems in robot learning. 

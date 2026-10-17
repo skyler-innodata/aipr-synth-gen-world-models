@@ -1,0 +1,57 @@
+% Draft 4: Springer LNCS template, as required by AIPR 2026 (proceedings in LNCS).
+% Built from draft 3 (paper3/); sections are being rewritten one at a time.
+% No page limit at AIPR 2026; length is driven by content.
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+% Draft markers. Delete this block before submission; no marker may remain.
+\newcommand{\verify}[1]{\textcolor{red}{[VERIFY: #1]}}
+
+\lstset{basicstyle=\ttfamily\scriptsize, breaklines=true, columns=fullflexible, frame=single, xleftmargin=3pt, framexleftmargin=3pt, aboveskip=0pt, belowskip=0pt}
+
+% Let pages carry more float material; the paper is figure-dense.
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\title{Synthetic Video Generation for Robot Learning Using World Foundation Models}
+\titlerunning{Synthetic Video Generation for Robot Learning}
+
+\author{Shrey Jha \and Skyler Saucedo \and Frank Tanner}
+\authorrunning{S. Jha et al.}
+
+\institute{Innodata Inc.\\
+\email{xxx@innodata.com}}
+
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\bibliographystyle{splncs04}
+\bibliography{refs}
+
+\end{document}

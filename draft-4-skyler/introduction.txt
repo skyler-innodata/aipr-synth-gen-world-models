@@ -1,0 +1,19 @@
+Training humanoid robotics requires large-scale egocentric data collections. 
+
+At the frontline of academia where humanoid robotic policy training and effetiveness are being quantified, the conensus is that 
+more traning data is needed, that the diversity of objects within the space (ontology) matter for policy robustness, and that the mean acceptable score scales logarithmically with the hours of egocentric video
+
+Authors of Egoscale claim over 20,000+ hours of egocentric video are need per task, achieving a mean  task acceptables score of 0.71. 
+pi0 pretrains on more than 10,000 hours of robot data [pi0];  LingBot-VLA on about 20,000 hours from nine dual-arm platforms, with success rates still rising at that scale [NEW lingbotvla]; 
+
+ Lin et al. collected 40,000 demonstrations and found that a single-task policy's generalization follows a power law in the number of training environments and objects, that additional demonstrations in the same environment stop helping past a threshold, and that 32 environments with one object each were enough for 90 percent success in rooms and on objects never seen [NEW lin2025scaling]. 
+
+And while over 20k hours of video are needed for a single task, An hour of egocentric video costs 8 to 15 USD in collector pay, so 20,000 hours for a single task 
+is economically infeasbile for startups and academia labs. 
+
+MimicGen multiplies 200 human demonstrations into 50,000 by replaying trajectory segments in new object poses, but in simulation and for robot trajectories, not video [NEW mimicgen]. 
+
+FieldGen, a field-guided ata generation framework that enables scable collection, but provides only a 2.47x increase over a 2hr training example. 
+
+We propose a method that effictively x10 the amount of trainiable data. 
+
