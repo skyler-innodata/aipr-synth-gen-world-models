@@ -1,0 +1,126 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/llncs\llncs.cls
+Document Class: llncs 2025/02/25 v2.26 
+ LaTeX document class for Lecture Notes in Computer Science
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\aliascnt.sty))
+ (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty)
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+) (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)))
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def)
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
+d\main.aux)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
+d\main.out)
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
+d\main.out)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+[1{C:/Users/endle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/en
+dle/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Underfull \vbox (badness 6893) has occurred while \output is active [2 <./figur
+es/fig1_policy_vs_data_amount.pdf>] [3 <./figures/fig2_pipeline.png>] [4 <./fig
+ures/fig3_sample_egocentric_video.png>] [5 <./figures/fig4_detection_boxes_and_
+json.png>] [6 <./figures/fig5_sample_json_ontology.png>] [7 <./figures/fig6_buc
+ket_old_new.png>]
+Underfull \vbox (badness 4181) has occurred while \output is active [8 <./figur
+es/fig7_pillow_old_new.png> <./figures/fig8_directional_reversal.png>] [9 <./fi
+gures/fig9_variant_examples.png>] [10]
+Underfull \hbox (badness 4229) in paragraph at lines 211--212
+[]\T1/cmr/m/n/9 NVIDIA: Cosmos-Transfer2.5: A Suite of Diffusion-based World-to
+-World
+
+Underfull \hbox (badness 4673) in paragraph at lines 211--212
+\T1/cmr/m/n/9 Mod-els. Hug-ging Face model card (2025). [][]$https : / / huggin
+gface . co / nvidia /
+[11]
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
+d\main.aux) )
+(see the transcript file for additional information)<C:/Users/endle/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/endle/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/
+endle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:
+/Users/endle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/Users/endle/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/s
+fbx0900.pfb><C:/Users/endle/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm
+-super/sfbx1000.pfb><C:/Users/endle/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/cm-super/sfbx1200.pfb><C:/Users/endle/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/cm-super/sfbx1440.pfb><C:/Users/endle/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/endle/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-m
+odels\paper7\build\main.pdf (11 pages, 3118526 bytes).
+Transcript written on C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-wor
+ld-models\paper7\build\main.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.
