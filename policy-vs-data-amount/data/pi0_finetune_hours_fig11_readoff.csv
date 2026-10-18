@@ -1,0 +1,4 @@
+finetuning_hours,pi0_pretrained_avg_task_progress,pi0_scratch_avg_task_progress,diffusion_policy_avg_task_progress
+1,0.57,0.39,0.20
+5,0.86,0.78,0.32
+10,0.87,0.75,0.38

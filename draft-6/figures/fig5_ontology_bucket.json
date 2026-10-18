@@ -1,0 +1,238 @@
+{
+  "location": {
+    "room_type": "small domestic kitchen or utility area with a white laminate countertop against a bare white wall",
+    "setting": "indoor, residential",
+    "time_of_day": "daytime, no window visible",
+    "lighting_condition": "bright, diffuse overhead indoor lighting with soft shadows",
+    "room_style": "plain, modern, minimal"
+  },
+  "task": {
+    "name": "Disposing of crumpled paper into a bucket",
+    "description": "A person holds a white plastic bucket above a countertop on which used, crumpled paper towels lie, positioning the bucket to collect the paper.",
+    "phase": "Preparation",
+    "action_primitive": "Holding a bucket and positioning it",
+    "difficulty": "easy",
+    "typical_duration_seconds": 15
+  },
+  "key_objects": [
+    {
+      "rank": 1,
+      "name": "White plastic bucket",
+      "bbox_2d": [405, 167, 750, 775],
+      "is_primary": true,
+      "role_in_task": "Container for disposing of waste",
+      "current_appearance": {
+        "color_description": "white, slightly translucent plastic with a dark blue rectangular label and a circular logo",
+        "rgb": [0.93, 0.93, 0.91],
+        "hex": "#EDEDE8",
+        "material": "polypropylene plastic",
+        "texture": "smooth, matte, faint mold lines",
+        "condition": "used, light scuffs, label intact",
+        "size_estimate": "about 20 cm in diameter and 20 cm tall, 5 to 10 liters"
+      },
+      "current_state": {
+        "position_on_surface": "held above the countertop, not resting on it",
+        "height_above_surface": "about 5 to 10 cm",
+        "orientation": "upright, rim tilted slightly toward the camera",
+        "interaction_state": "grasped at the rim by the right hand",
+        "task_completion_phase": "before disposal, bucket being positioned"
+      },
+      "variations": {
+        "color_and_appearance": [
+          "solid white", "solid black", "solid grey", "solid red", "solid blue", "solid green",
+          "solid yellow", "solid orange", "solid teal", "solid purple", "translucent clear",
+          "two-tone body and rim", "striped", "printed brand graphics", "faded and sun-bleached",
+          "stained with paint or cleaning residue", "glossy finish", "matte finish", "metallic galvanized look"
+        ],
+        "material_and_texture": [
+          "polypropylene plastic", "HDPE plastic", "galvanized steel", "enameled steel", "rubber",
+          "silicone collapsible", "woven plastic", "ribbed plastic for grip", "smooth glossy plastic"
+        ],
+        "size_and_shape": [
+          "small 3 liter pail", "standard 10 liter bucket", "large 20 liter bucket", "square-profile bucket",
+          "tapered bucket", "straight-sided bucket", "wide shallow basin", "bucket with pouring spout",
+          "bucket with a wire handle", "bucket with a molded side grip"
+        ],
+        "state_and_position": [
+          "resting on the countertop", "resting on the floor beside the counter", "held above the counter",
+          "tilted toward the paper", "lying on its side", "half full of paper", "full and overflowing",
+          "containing water", "lid on", "lid off", "handle up", "handle down"
+        ],
+        "condition": ["new", "used", "scratched", "cracked rim", "dented", "wet inside", "wet outside", "dirty", "dusty", "label peeling", "label missing"],
+        "interaction": [
+          "grasp at the rim with fingers inside", "grasp the wire handle from above", "grasp the side body with a wide grip",
+          "two-handed carry", "approach from above", "approach from the side", "firm grip on smooth plastic",
+          "slippery when wet", "low fragility", "light when empty, heavy when full of water"
+        ],
+        "brand_and_style": ["hardware-store generic", "branded paint bucket", "cleaning-supply bucket with wringer", "decorative household pail", "industrial pail with printed warnings"]
+      },
+      "robustness_gaps": {
+        "what_robot_must_handle": ["Different bucket sizes and shapes", "Labels with varying colors and designs", "Wet or slippery buckets"],
+        "common_failure_modes": ["Bucket slips from hand", "Bucket tips over", "Bucket cannot be opened"],
+        "edge_cases": ["bucket partly out of frame", "bucket occluded by the arm", "bucket the same color as the counter", "transparent bucket"]
+      }
+    },
+    {
+      "rank": 2,
+      "name": "Crumpled paper",
+      "bbox_2d": [465, 725, 955, 1000],
+      "is_primary": false,
+      "role_in_task": "Waste to be collected into the bucket",
+      "current_appearance": {
+        "color_description": "white paper towel with grey-brown soiling",
+        "rgb": [0.85, 0.82, 0.78],
+        "hex": "#D9D1C7",
+        "material": "paper towel",
+        "texture": "crumpled, fibrous, damp in places",
+        "condition": "used, dirty, damp",
+        "size_estimate": "two sheets, about 25 cm across when crumpled"
+      },
+      "current_state": {
+        "position_on_surface": "lying on the countertop at the lower right",
+        "height_above_surface": "0 cm",
+        "orientation": "loosely crumpled, irregular",
+        "interaction_state": "not in contact with the hand",
+        "task_completion_phase": "waiting to be picked up"
+      },
+      "variations": {
+        "color_and_appearance": ["clean white", "soiled grey", "stained brown", "blue shop towel", "printed pattern paper towel", "yellow", "green", "pink", "beige", "newspaper print", "wet and translucent"],
+        "material_and_texture": ["paper towel", "tissue", "newspaper", "kitchen cloth", "microfiber cloth", "sponge"],
+        "size_and_shape": ["single sheet", "two sheets", "a pile", "flat sheet", "tightly balled", "torn fragments"],
+        "state_and_position": ["lying flat", "crumpled", "partly in the bucket", "in the bucket", "held in the hand", "on the floor", "stuck to the counter"],
+        "condition": ["clean", "damp", "soaked", "greasy", "torn", "shredded"],
+        "interaction": ["pinch grasp from above", "scoop with the whole hand", "sweep into the bucket", "low force", "deforms on contact", "may tear"],
+        "brand_and_style": ["plain", "embossed", "quilted", "branded print"]
+      },
+      "robustness_gaps": {
+        "what_robot_must_handle": ["Deformable, irregular shapes", "Pieces that stick to a wet surface", "Several pieces at once"],
+        "common_failure_modes": ["Paper tears during grasp", "Paper missed and left on the counter", "Paper dropped beside the bucket"],
+        "edge_cases": ["paper the same color as the counter", "a single tiny fragment", "paper under the bucket"]
+      }
+    },
+    {
+      "rank": 3,
+      "name": "Human hand",
+      "bbox_2d": [405, 283, 700, 550],
+      "is_primary": false,
+      "role_in_task": "Grasps and positions the bucket",
+      "current_appearance": {
+        "color_description": "light skin tone, bare forearm entering from the lower left",
+        "rgb": [0.82, 0.66, 0.56],
+        "hex": "#D1A88F",
+        "material": "skin",
+        "texture": "smooth",
+        "condition": "clean, dry",
+        "size_estimate": "adult hand, about 18 cm"
+      },
+      "current_state": {
+        "position_on_surface": "above the countertop",
+        "height_above_surface": "about 15 cm",
+        "orientation": "palm facing right, fingers curled over the bucket rim",
+        "interaction_state": "grasping the bucket",
+        "task_completion_phase": "holding"
+      },
+      "variations": {
+        "color_and_appearance": ["range of skin tones", "wearing a glove (blue nitrile, yellow rubber, white cotton)", "sleeve visible", "wet skin", "soapy skin", "with a ring or watch", "with a bracelet", "tattooed", "scarred", "painted nails", "dirty fingers"],
+        "material_and_texture": ["bare skin", "nitrile glove", "rubber glove", "cotton glove", "robot gripper"],
+        "size_and_shape": ["small hand", "large hand", "child hand", "left hand instead of right"],
+        "state_and_position": ["grasping the rim", "grasping the handle", "releasing", "approaching", "withdrawing", "holding a cloth", "both hands on the bucket"],
+        "condition": ["dry", "wet", "soapy", "gloved"],
+        "interaction": ["rim grasp", "handle grasp", "body grasp", "two-handed lift"],
+        "brand_and_style": ["bare", "branded glove"]
+      },
+      "robustness_gaps": {
+        "what_robot_must_handle": ["Occlusion of the bucket by the hand", "Different grasps on the same bucket", "Gloved and ungloved hands in the demonstration data"],
+        "common_failure_modes": ["Hand pose misread as a different grasp", "Hand confused with the bucket during tracking"],
+        "edge_cases": ["hand leaves the frame", "second hand enters", "hand hidden inside the bucket"]
+      }
+    },
+    {
+      "rank": 4,
+      "name": "White surface",
+      "bbox_2d": [15, 308, 1000, 1000],
+      "is_primary": false,
+      "role_in_task": "Countertop on which the waste lies and over which the bucket is positioned",
+      "current_appearance": {
+        "color_description": "white laminate countertop with faint grey specks",
+        "rgb": [0.95, 0.95, 0.94],
+        "hex": "#F2F2F0",
+        "material": "laminate",
+        "texture": "smooth, slightly reflective",
+        "condition": "clean with small marks near the paper",
+        "size_estimate": "about 60 cm deep, extends beyond the frame"
+      },
+      "current_state": {
+        "position_on_surface": "fills the lower two thirds of the frame",
+        "height_above_surface": "0 cm",
+        "orientation": "horizontal, viewed from above at an angle",
+        "interaction_state": "supports the paper; bucket held above it",
+        "task_completion_phase": "not yet cleaned"
+      },
+      "variations": {
+        "color_and_appearance": ["solid white", "solid black", "solid grey", "solid blue", "solid green", "solid red", "solid beige", "wood grain", "marble veining", "granite speckle", "terrazzo", "glossy", "matte", "scratched and worn", "stained"],
+        "material_and_texture": ["laminate", "granite", "marble", "wood", "stainless steel", "tile", "concrete", "glass"],
+        "size_and_shape": ["narrow counter", "wide island", "L-shaped corner", "with a visible edge", "with a backsplash"],
+        "state_and_position": ["clean", "cluttered with dishes", "wet", "with crumbs", "with a sponge on it", "partly covered by a mat"],
+        "condition": ["new", "worn", "chipped edge", "stained", "wet"],
+        "interaction": ["wipe with a cloth", "rest the bucket on it", "sweep paper across it"],
+        "brand_and_style": ["plain laminate", "designer stone", "rustic wood"]
+      },
+      "robustness_gaps": {
+        "what_robot_must_handle": ["Reflections on glossy surfaces", "Low contrast between white objects and a white counter", "Surfaces of many colors and patterns"],
+        "common_failure_modes": ["Counter edge mistaken for an object", "Paper not detected against a similar color"],
+        "edge_cases": ["counter the same color as the wall", "a mirror-like surface"]
+      }
+    },
+    {
+      "rank": 5,
+      "name": "White wall",
+      "bbox_2d": [15, 75, 1000, 590],
+      "is_primary": false,
+      "role_in_task": "Background behind the countertop",
+      "current_appearance": {
+        "color_description": "white painted wall",
+        "rgb": [0.96, 0.95, 0.94],
+        "hex": "#F4F3EF",
+        "material": "painted plaster",
+        "texture": "flat, slightly uneven",
+        "condition": "clean",
+        "size_estimate": "spans the width of the frame"
+      },
+      "current_state": {
+        "position_on_surface": "behind the counter",
+        "height_above_surface": "rises from the counter edge",
+        "orientation": "vertical",
+        "interaction_state": "none",
+        "task_completion_phase": "not applicable"
+      },
+      "variations": {
+        "color_and_appearance": ["white", "cream", "beige", "grey", "light blue", "pale green", "yellow", "terracotta", "dark navy", "patterned wallpaper", "tiled splashback", "exposed brick", "wood paneling"],
+        "material_and_texture": ["painted plaster", "ceramic tile", "brick", "wood", "glass splashback", "stainless steel"],
+        "size_and_shape": ["full wall", "wall with a window", "wall with cabinets above", "wall with a shelf"],
+        "state_and_position": ["bare", "with a hanging towel", "with a power outlet", "with a poster"],
+        "condition": ["clean", "scuffed", "stained near the counter"],
+        "interaction": ["none"],
+        "brand_and_style": ["plain", "decorated"]
+      },
+      "robustness_gaps": {
+        "what_robot_must_handle": ["Backgrounds that change color with lighting", "Objects on the wall that distract detection"],
+        "common_failure_modes": ["Wall color bleeding into the counter in generated variants"],
+        "edge_cases": ["no wall visible", "a window where the wall was"]
+      }
+    }
+  ],
+  "scene_variations": {
+    "lighting": ["bright overhead", "warm lamp light", "cool daylight from a window", "dim evening light", "strong side light with hard shadows", "mixed warm and cool sources", "flickering fluorescent"],
+    "camera_viewpoint": ["head-mounted looking down", "chest-mounted", "slightly to the left of the task", "slightly to the right", "closer to the counter", "farther back", "tilted"],
+    "room_style_and_culture": ["modern European kitchen", "American suburban kitchen", "East Asian apartment kitchen", "South Asian kitchen with stone counter", "rustic farmhouse", "office pantry", "laboratory bench"],
+    "time_of_day": ["morning", "midday", "late afternoon", "night with artificial light"],
+    "background_clutter": ["bare counter", "dishes and cups", "cleaning bottles", "a sponge and a rag", "groceries", "appliances", "a second bucket"],
+    "person_characteristics": ["different skin tones", "different hand sizes", "gloves", "long sleeves", "short sleeves", "jewelry", "left-handed", "a child", "an older adult"],
+    "task_sequence_variations": ["bucket placed on the counter first", "paper picked up before the bucket", "paper swept with a cloth into the bucket", "bucket already holding paper", "two people", "task interrupted and resumed"]
+  },
+  "dataset_gaps": {
+    "what_current_clip_shows": "One person, one white bucket, white counter and white wall, bright even lighting, a single preparation phase of the task, viewed from one head position.",
+    "what_is_missing": ["Any color or material other than white for the bucket, counter and wall", "The disposal action itself and the end state", "Other lighting conditions", "Clutter on the counter", "Other hands, grasps and gloves", "Failure cases such as a tipped or dropped bucket"],
+    "highest_priority_variations": ["Counter color and material", "Bucket color, size and label", "Lighting", "Clutter on the counter", "Hand appearance and gloves"]
+  }
+}

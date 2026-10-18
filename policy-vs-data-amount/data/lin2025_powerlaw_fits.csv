@@ -1,0 +1,7 @@
+task,x_variable,beta,alpha,pearson_r,x_values_fitted
+Pour Water,training objects,0.825,-0.703,-0.987,"1,2,4,8,16,32"
+Pour Water,training environments,1.180,-0.844,-0.960,"1,2,4,8,16,32"
+Pour Water,environment-object pairs,1.068,-0.579,-0.980,"1,2,4,8,16,32"
+Mouse Arrangement,training objects,0.826,-0.697,-0.991,"1,2,4,8,16,32"
+Mouse Arrangement,training environments,0.827,-0.466,-0.966,"1,2,4,8,16,32"
+Mouse Arrangement,environment-object pairs,1.263,-0.683,-0.942,"1,2,4,8,16,32"

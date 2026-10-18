@@ -1,0 +1,19 @@
+{
+  "egoscale_score_vs_ln_hours": {
+    "a": -0.5301481274151553,
+    "b": 0.12311944677091097,
+    "r2": 0.9556175150157493
+  },
+  "lingbot_success_vs_ln_hours_readoff": {
+    "a": -0.6016158919962001,
+    "b": 0.09509721651971573,
+    "r2": 0.8228054426831659
+  },
+  "lin_mouse_objects_score_at_32": 0.9262281775358661,
+  "lin_mouse_environments_score_at_32": 0.8355228319836706,
+  "lin_mouse_env_object_pairs_score_at_32": 0.8815906722832507,
+  "fieldgen_FieldGen_DP_at_20min": 0.9790000000000001,
+  "fieldgen_Teleoperation_DP_at_20min": 0.6459999999999999,
+  "fieldgen_FieldGen_RDT-small_at_20min": 0.938,
+  "fieldgen_Teleoperation_RDT-small_at_20min": 0.562
+}

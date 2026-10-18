@@ -1,0 +1,17 @@
+task,source_10_demos_success_pct,source_std,generated_1000_demos_D0_success_pct,generated_std
+Stack,26.0,1.6,100.0,0.0
+Stack Three,0.7,0.9,92.7,1.9
+Square,11.3,0.9,90.7,1.9
+Threading,19.3,3.4,98.0,1.6
+Coffee,74.0,4.3,100.0,0.0
+Three Pc. Assembly,1.3,0.9,82.0,1.6
+Hammer Cleanup,59.3,5.7,100.0,0.0
+Mug Cleanup,12.7,2.5,80.0,4.9
+Kitchen,54.7,8.4,100.0,0.0
+Nut Assembly,0.0,0.0,53.3,1.9
+Pick Place,0.0,0.0,50.7,6.6
+Coffee Preparation,12.7,3.4,97.3,0.9
+Mobile Kitchen,2.0,0.0,46.7,18.4
+Nut-and-Bolt Assembly,8.7,2.5,92.7,2.5
+Gear Assembly,14.7,5.2,98.7,1.9
+Frame Assembly,10.7,6.8,82.0,4.3

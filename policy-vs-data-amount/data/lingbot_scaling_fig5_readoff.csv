@@ -1,0 +1,6 @@
+pretraining_hours,success_rate_pct_avg,progress_rate_pct_avg
+3000,18.5,31
+6000,19.5,33
+13000,28,44
+18000,30.5,46
+20000,39,57.5

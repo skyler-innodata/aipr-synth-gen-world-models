@@ -1,0 +1,6 @@
+human_pretraining_hours,avg_task_completion_score
+1000,0.30
+2000,0.45
+4000,0.48
+10000,0.57
+20000,0.71
