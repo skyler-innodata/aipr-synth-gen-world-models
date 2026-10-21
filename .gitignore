@@ -34,3 +34,7 @@ Thumbs.db
 desktop.ini
 .DS_Store
 .vscode/
+
+# oct-21 LNCS build: build/ is pdflatex output, figures/ is copied from oct-21/figures by build.sh
+oct-21/updated/build/
+oct-21/updated/figures/
