@@ -1,5 +1,6 @@
 #!/bin/bash
-# Build draft 7 (paper7/main.tex) with pdflatex twice; output in build/, copy to draft-7/main.pdf.
+# Build draft 7 (paper7/main.tex) with pdflatex twice; output in build/, copy to ../main.pdf
+# (skyler-first-draft/main.pdf).
 # The bibliography is a thebibliography environment, so no bibtex pass is needed.
 # PATH is reduced to MiKTeX plus system dirs because MiKTeX's format builder aborts on
 # PATH entries that are files rather than directories (this machine has one).
@@ -12,4 +13,4 @@ pdflatex -interaction=nonstopmode -output-directory=build main.tex > build/run2.
 echo "errors:"; grep -n "^!" build/main.log | head
 grep -o "Output written on [^(]*([0-9]* pages" build/main.log
 echo "overfull: $(grep -c Overfull build/main.log)"; grep -i "undefined" build/main.log | head -3
-cp build/main.pdf ../draft-7/main.pdf && echo "copied to draft-7/main.pdf"
+cp build/main.pdf ../main.pdf && echo "copied to skyler-first-draft/main.pdf"

@@ -71,8 +71,8 @@ echeck.sty
 ounter.sty)))
 (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def)
-(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
-d\main.aux)
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\skyler-firs
+t-draft\paper7\build\main.aux)
 (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -81,10 +81,10 @@ ii
 ase.sty
 (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
 fg))
-(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
-d\main.out)
-(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
-d\main.out)
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\skyler-firs
+t-draft\paper7\build\main.out)
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\skyler-firs
+t-draft\paper7\build\main.out)
 (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
 (C:\Users\endle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
 [1{C:/Users/endle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/en
@@ -105,8 +105,8 @@ Underfull \hbox (badness 4673) in paragraph at lines 211--212
 \T1/cmr/m/n/9 Mod-els. Hug-ging Face model card (2025). [][]$https : / / huggin
 gface . co / nvidia /
 [11]
-(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\paper7\buil
-d\main.aux) )
+(C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-models\skyler-firs
+t-draft\paper7\build\main.aux) )
 (see the transcript file for additional information)<C:/Users/endle/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/endle/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/
@@ -120,7 +120,7 @@ ublic/cm-super/sfbx1200.pfb><C:/Users/endle/AppData/Local/Programs/MiKTeX/fonts
 eX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/endle/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
 Output written on C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-world-m
-odels\paper7\build\main.pdf (11 pages, 3118526 bytes).
+odels\skyler-first-draft\paper7\build\main.pdf (11 pages, 3118526 bytes).
 Transcript written on C:\Users\endle\Desktop\aipr-paper-2026\aipr-synth-gen-wor
-ld-models\paper7\build\main.log.
+ld-models\skyler-first-draft\paper7\build\main.log.
 pdflatex: major issue: So far, you have not checked for MiKTeX updates.
