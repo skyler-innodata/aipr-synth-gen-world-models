@@ -10,8 +10,12 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{url}
-\usepackage[hidelinks]{hyperref}
-\renewcommand\UrlFont{\rmfamily}
+\usepackage{xcolor}
+% Springer eBook style (llncs sample template): URLs in blue roman type. Citation and
+% figure links are clickable but stay black, since Springer does not set colour in text.
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\urlstyle{rm}
 
 \setcounter{topnumber}{3}
 \setcounter{totalnumber}{4}
