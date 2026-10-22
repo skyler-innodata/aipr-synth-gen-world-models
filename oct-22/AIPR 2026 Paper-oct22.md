@@ -79,7 +79,7 @@ Eight recordings of first-person videos of household chores were used to generat
 
 *Fig. 4. Converting the white countertop to blue, the rag to blue, the bucket to blue, and varying the skin color of the human.*
 
-Fig. 4 shows that the resulting variant permutes the color of the objects in the ontology, while maintaining the hand pose and the bucket and countertop geometry. We observed that the cleaning motion observed in the before video is maintained by the variant, frame by frame. We also observed that the background wall and lighting have changed, adding more entropy as desired.
+Fig. 4 shows that the resulting variant permutes the color of the objects in the ontology, while maintaining the hand pose and the bucket and countertop geometry. We observed that the cleaning motion observed in the before video is maintained by the variant, frame by frame. We also observed that the background wall and lighting have changed, increasing scene diversity.
 
 ![Two frames labelled Old and New. Old: hands stuff a white pillow on a wooden chair with patterned cushions. New: the pillow, the cushions, and the chairs are all rendered blue.](figures/fig7-pillow-stuffing.png)
 
