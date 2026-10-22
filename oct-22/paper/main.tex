@@ -10,7 +10,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
-\usepackage{pifont}
 \usepackage{url}
 \usepackage{xcolor}
 % Springer eBook style (llncs sample template): URLs in blue roman type. Citation and
@@ -32,13 +31,14 @@
 \title{Synthetic Video Generation for Robot Learning Using World Foundation Models}
 \titlerunning{Synthetic Video Generation for Robot Learning}
 
-\author{Shrey Jha\textsuperscript{(\ding{41})}\orcidID{0009-0003-5044-4187} \and
-Skyler Saucedo\orcidID{0009-0005-7005-7736} \and
-Franklin Tanner\orcidID{0009-0003-6814-2291}}
+\author{Shrey Jha\inst{1}\orcidID{0009-0003-5044-4187} \and
+Skyler Saucedo\inst{2}\orcidID{0009-0005-7005-7736} \and
+Franklin Tanner\inst{3}\orcidID{0009-0003-6814-2291}}
 \authorrunning{S. Jha et al.}
 
-\institute{Innodata [VERIFY: city, country]\\
-\email{Shrey\_Jha@innodata.net}}
+\institute{Innodata, Physical AI Intern \and
+Innodata, Robotics and Physical AI Solutions Architect \and
+Innodata, VP Robotics and Computer Vision}
 
 \maketitle
 
@@ -88,14 +88,15 @@ Four guidance maps are generated to preserve item edges, depth, color, and segme
 
 As shown in Fig.~\ref{fig:source}, our example video consists of a white bucket on a white countertop, and the task is defined as follows: a human must use a washcloth from the bucket to clean the countertop. If we wish to train a robot policy on this cleaning task, we will need to augment portions of the video to increase the amount of training data to improve our average task completion score. If we decide to change the color of the bucket, countertop, or rags, does that permutation affect the outcome of the robot training policy? Whichever model is used, it must learn to associate objects with the broader actions and physical context they participate in: not just what they look like, but how they behave in the task. This requirement is why reasoning with structured ontologies is critical: we ask a model to understand the scene, objects, states, materials, lighting, and actions before anything else is varied, so that the permutations proposed for an object are physically plausible for the given task.
 
-\begin{figure}[t]
+Cosmos 3 Nano receives the first frame of the clip together with a fixed instruction, and returns a structured JSON record that defines the observed ontology (Fig.~\ref{fig:reasoning}).
+
+\begin{figure}[b]
 \centering
 \includegraphics[width=\linewidth]{fig4-reasoning-output.png}
 \caption{Reasoning output for the scene with object detection bounding boxes, along with the JSON ontology.}
 \label{fig:reasoning}
 \end{figure}
-
-Cosmos 3 Nano receives the first frame of the clip together with a fixed instruction, and returns a structured JSON record that defines the observed ontology. Our pipeline asks for up to ten task-relevant objects, each with a bounding box, and for each object: its role in the task, its current appearance (color, material, texture, condition, size), its current state (position, orientation, interaction with hands), and candidate variations along seven dimensions (color and appearance, material and texture, size and shape, state and position, condition, interaction, brand and style). A parallel block records scene-level variations (lighting, viewpoint, room style, time of day, clutter) and a final block states what training on this clip could miss. Reasoning takes about 130 seconds per clip on one A100.
+ Our pipeline asks for up to ten task-relevant objects, each with a bounding box, and for each object: its role in the task, its current appearance (color, material, texture, condition, size), its current state (position, orientation, interaction with hands), and candidate variations along seven dimensions (color and appearance, material and texture, size and shape, state and position, condition, interaction, brand and style). A parallel block records scene-level variations (lighting, viewpoint, room style, time of day, clutter) and a final block states what training on this clip could miss. Reasoning takes about 130 seconds per clip on one A100.
 
 \subsection{From Ontology to Generation-Ready Prompts}
 

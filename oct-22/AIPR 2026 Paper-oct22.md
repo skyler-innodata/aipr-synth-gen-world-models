@@ -1,8 +1,10 @@
 # Synthetic Video Generation for Robot Learning Using World Foundation Models
 
-Shrey Jha (corresponding author, ORCID 0009-0003-5044-4187), Skyler Saucedo (ORCID 0009-0005-7005-7736), and Franklin Tanner (ORCID 0009-0003-6814-2291)
+Shrey Jha¹ (ORCID 0009-0003-5044-4187), Skyler Saucedo² (ORCID 0009-0005-7005-7736), and Franklin Tanner³ (ORCID 0009-0003-6814-2291)
 
-Innodata [VERIFY: city, country]. Corresponding author: Shrey_Jha@innodata.net
+¹ Innodata, Physical AI Intern
+² Innodata, Robotics and Physical AI Solutions Architect
+³ Innodata, VP Robotics and Computer Vision
 
 ## Abstract
 
@@ -48,7 +50,7 @@ As shown in Fig. 2, our example video consists of a white bucket on a white coun
 
 *Fig. 3. Reasoning output for the scene with object detection bounding boxes, along with the JSON ontology.*
 
-Cosmos 3 Nano receives the first frame of the clip together with a fixed instruction, and returns a structured JSON record that defines the observed ontology. Our pipeline asks for up to ten task-relevant objects, each with a bounding box, and for each object: its role in the task, its current appearance (color, material, texture, condition, size), its current state (position, orientation, interaction with hands), and candidate variations along seven dimensions (color and appearance, material and texture, size and shape, state and position, condition, interaction, brand and style). A parallel block records scene-level variations (lighting, viewpoint, room style, time of day, clutter) and a final block states what training on this clip could miss. Reasoning takes about 130 seconds per clip on one A100.
+Cosmos 3 Nano receives the first frame of the clip together with a fixed instruction, and returns a structured JSON record that defines the observed ontology (Fig. 3). Our pipeline asks for up to ten task-relevant objects, each with a bounding box, and for each object: its role in the task, its current appearance (color, material, texture, condition, size), its current state (position, orientation, interaction with hands), and candidate variations along seven dimensions (color and appearance, material and texture, size and shape, state and position, condition, interaction, brand and style). A parallel block records scene-level variations (lighting, viewpoint, room style, time of day, clutter) and a final block states what training on this clip could miss. Reasoning takes about 130 seconds per clip on one A100.
 
 ### 2.2 From Ontology to Generation-Ready Prompts
 
