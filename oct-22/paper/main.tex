@@ -163,7 +163,7 @@ We did observe some limitations in this process, particularly when requesting pe
 
 From three 10-minute video examples, we used our workflow to create 116 clips to generate 72 variations per clip, producing 8,352 synthetic video variations, or about 35 hours of video from 29 minutes of source data. The number of permuted variants depends on the number of objects in the ontology available to change, along with what physical attributes are within the current limit of the NVIDIA World Model suite. One 10-minute video became 4 hours without a new scene or room generated. At the time of publication, the authors have not quantified how much of this synthetic data is useful.
 
-Considering the current market rate for raw egocentric data is 3 to 25 USD per hour, we find that this process can quickly scale a sparse dataset into one with sufficient hours and diversity, while maintaining the overall physics of the scene. For every hour processed with our pipeline, we spend 96 USD for GPU cloud instance costs (80 A100-hours at 20 minutes per clip) and 0.12 USD in LLM token costs. For practitioners and academics who have a limited budget for training robot policies, this workflow provides a cohesive and practical solution.
+Rendering costs about 0.25 USD per 15-second variant on a Colab Pro+ A100 (20 minutes of GPU time at roughly 0.75 USD per A100-hour as of 2026), plus about 0.03 USD per clip for reasoning and 0.001 USD in LLM tokens. What the pipeline buys is variation at scale: new colors, materials, and lighting on motion that has already been recorded, which Lin et al. identify as the quantity that moves generalization \cite{r4}.
 
 \section{Conclusion}
 
