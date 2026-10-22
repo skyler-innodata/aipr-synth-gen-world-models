@@ -21,6 +21,7 @@
 \setcounter{topnumber}{3}
 \setcounter{totalnumber}{4}
 \renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.6}
 \renewcommand{\textfraction}{0.07}
 \renewcommand{\floatpagefraction}{0.85}
 
@@ -143,7 +144,7 @@ Fig.~\ref{fig:bucket} shows that the resulting variant permutes the color of the
 
 We see that adding complexity to objects can sometimes add unintended consequences to the variant scene. As observed in Fig.~\ref{fig:pillow}, we task the data collector to stuff a throw pillow for a chair. When we employed the pipeline to produce variants, our only request was that the color of the pillow change to blue. The variant not only changed the pillow blue but also changed the background chairs blue. We found that poor image segmentation results are the cause here, suggesting the need to fine-tune Canny edge-gradient parameters.
 
-\begin{figure}[t]
+\begin{figure}[b]
 \centering
 \includegraphics[width=\linewidth]{fig6-reversal-oct22.png}
 \caption{Directional Reversal Experiment}
