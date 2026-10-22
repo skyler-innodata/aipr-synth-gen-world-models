@@ -13,7 +13,7 @@ PANDOC="/c/Users/endle/AppData/Local/Pandoc/pandoc.exe"
 [ -x "$PANDOC" ] || PANDOC=pandoc
 
 mkdir -p build figures
-for f in fig2-pipeline fig3-source-clip fig4-reasoning-output fig6-countertop-blue fig7-pillow-stuffing fig8-directional-reversal fig7-variants-oct22; do
+for f in fig2-pipeline fig3-source-clip fig4-reasoning-output fig6-countertop-blue fig7-pillow-stuffing fig6-reversal-oct22 fig7-variants-oct22; do
   [ -f "figures/$f.png" ] || cp "../figures/$f.png" figures/
 done
 
