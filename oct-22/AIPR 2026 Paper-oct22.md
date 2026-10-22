@@ -91,11 +91,11 @@ We see that adding complexity to objects can sometimes add unintended consequenc
 
 *Fig. 6. Directional Reversal Experiment*
 
-We did observe some limitations in this process, particularly when requesting permutations in the physics of the scene. In Fig. 6, the data collector is taking a phone charger and winding the USB cord around the wall plug in a clockwise direction (with respect to the wall plug). Next, we ask the pipeline to wind the cord in the opposite direction, counterclockwise. Surprisingly, the resulting variant was unable to maintain this ask: the spooling wire looked like spaghetti, with the cord gaining linear mass and length at times. The hands do in fact maintain the same orientation as the original video, but the variant fails to maintain the physics, violating conservation of mass and continuity. Fig. 7 places the source desk clip and its appearance variant side by side.
-
 ![Two frames. Left: the source desk clip, hands holding a charger cable in front of a bookshelf. Right: the same scene with the desk and shelf objects rendered blue.](figures/fig7-variants-oct22.png)
 
 *Fig. 7. Variants of the desk clip: the source clip (left) and an appearance variant with the desk and shelf recolored blue (right).*
+
+We did observe some limitations in this process, particularly when requesting permutations in the physics of the scene. In Fig. 6, the data collector is taking a phone charger and winding the USB cord around the wall plug in a clockwise direction (with respect to the wall plug). Next, we ask the pipeline to wind the cord in the opposite direction, counterclockwise. Surprisingly, the resulting variant was unable to maintain this ask: the spooling wire looked like spaghetti, with the cord gaining linear mass and length at times. The hands do in fact maintain the same orientation as the original video, but the variant fails to maintain the physics, violating conservation of mass and continuity. Fig. 7 places the source desk clip and its appearance variant side by side.
 
 ## 4 Closing the Gap
 
