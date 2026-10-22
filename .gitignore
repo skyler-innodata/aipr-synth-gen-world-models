@@ -38,3 +38,5 @@ desktop.ini
 # oct-21 LNCS build: build/ is pdflatex output, figures/ is copied from oct-21/figures by build.sh
 oct-21/updated/build/
 oct-21/updated/figures/
+oct-22/updated/build/
+oct-22/updated/figures/
