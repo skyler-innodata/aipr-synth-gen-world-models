@@ -87,9 +87,9 @@ We see that adding complexity to objects can sometimes add unintended consequenc
 
 ![Two frames. Left: the source desk clip, hands holding a charger cable in front of a bookshelf. Right: the same scene with the desk and shelf objects rendered blue.](figures/fig7-variants-oct22.png)
 
-*Fig. 6. Another example of color permutation, on the cable-winding clip: source (left) and variant with the desk and shelf recolored blue (right).*
+*Fig. 6. Another example of color permutation, on the cable-winding clip: source (left) and variant (right).*
 
-Fig. 6 shows the same kind of appearance change on the cable-winding clip: the desk and shelf are recolored and the hands and cable are preserved. We used this clip to test a change of a different kind.
+Fig. 6 illustrates another appearance change, this time on the color of background items. When we prompt to permute the color of some background items within the cable-winding clip from black to blue, we see the desk, shelf, hands and cable are preserved, while some of the black colored items are altered.
 
 ![Two frames. Left: the source clip, hands holding a white charger cable in front of a desk and bookshelf. Right: the variant prompted to wind the cord the other way, in which the cable has become a tangled, smeared loop across the desk.](figures/fig6-reversal-oct22.png)
 

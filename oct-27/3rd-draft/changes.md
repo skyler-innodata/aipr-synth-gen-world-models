@@ -46,7 +46,7 @@ All nine accepted. Edit 2 is applied in reworded form (see C10).
 | C21, Sec. 2.1 | No questions mid-paragraph; make it an assertion | "We want to know whether varying the color of the bucket, countertop, or rags changes the outcome of the robot training policy." The same rule applied to the Conclusion's question, which Frank did not mark: "Lastly, whether structured reasoning about a scene produces better variations than random augmentation remains untested." |
 | C22, captions | Checked in the PDF, not reviewing in Word | No change. |
 | C35, Results | "Predict2? Not sure where the 2 came from?" | The model is NVIDIA Cosmos Predict2 (reference 7). It is now introduced in the Method, at the end of the pipeline description: "For action-level changes, such as the cord reversal in Fig. 7, we instead use Cosmos Predict2 [7], which generates the clip from the first frame and the text prompt alone rather than from control maps." Results now says "Cosmos Predict2 [7] renderings". |
-| C37, Fig. 6/7 | Appearance figure should not follow the reversal discussion; move it above, recaption, fix the transition | Figures swapped. Fig. 6 is now the desk-clip appearance pair with the caption "Another example of color permutation, on the cable-winding clip: source (left) and variant with the desk and shelf recolored blue (right)." A short transition follows it ("Fig. 6 shows the same kind of appearance change on the cable-winding clip ... We used this clip to test a change of a different kind."), then Fig. 7, the directional reversal, and the reversal paragraph, which no longer ends with the orphaned "Fig. 7 places ..." sentence. Results now end on the limitation. |
+| C37, Fig. 6/7 | Appearance figure should not follow the reversal discussion; move it above, recaption, fix the transition | Figures swapped. Fig. 6 is now the desk-clip appearance pair with the caption "Another example of color permutation, on the cable-winding clip: source (left) and variant (right)." A short paragraph on the black-to-blue permutation follows it (Skyler, 27 October; see Sec. 5), then Fig. 7, the directional reversal, and the reversal paragraph, which no longer ends with the orphaned "Fig. 7 places ..." sentence. Results now end on the limitation. |
 
 ## 3. Decisions still open for the authors
 
@@ -54,6 +54,19 @@ All nine accepted. Edit 2 is applied in reworded form (see C10).
 2. **Fig. 7 provenance.** The recovered Predict2 prompts asked for winding with the block fixed, not for a reversal. The text and the new Method sentence both describe a reversal. Shrey to confirm before camera-ready.
 3. **Content items carried over unchanged from 22 October** (not raised by Frank): the three conflicting source-data counts and "one 10-minute video became 4 hours"; "producing 8,352 synthetic video variations" where 64 were rendered; head-mounted versus handheld camera; the Fig. 4 caption treating skin-tone, wall and lighting changes as requested; Sec. 2.3's claim that the mask protects neighbors; "(see appendix for source code)" with no appendix; whether the Disclosure of Interests should name Innodata's data-collection business as the source of the 3 to 25 USD figure. Full list in `oct-21/oct-21-status-and-todo.md`, Sec. 4.
 
+4. **Predict2 or Predict2.5.** Shrey's written answers (`supporting-docs/answers-from-shrey.pdf`, Q1) name the action model as `nvidia/Cosmos-Predict2-2B-Video2World`, which is what reference 7 cites. On 27 October Shrey said he used "Cosmos Predict2.5 video world". These are different releases: Predict2 (June 2025) ships separate Text2Image and Video2World checkpoints; Predict2.5 (6 October 2025, repo `nvidia/Cosmos-Predict2.5-2B`) is one checkpoint that covers Text2World, Image2World and Video2World and uses Cosmos-Reason1 as its text encoder. NVIDIA has archived the Predict2 collection in favour of 2.5. The recorded run settings (35 steps, 93 frames, 16 fps, 480p) fit either. Shrey to confirm which repository he cloned. If it was 2.5, reference 7 becomes the Predict2.5 model card and "Predict2" becomes "Predict2.5" in the Method and Results (two places).
+
 ## 4. Layout
 
 Figures are placed where they stand in the text (no floating), pages are ragged-bottom, and the reading order is Fig. 4, Results, Fig. 5, pillow paragraph, Fig. 6 (desk appearance pair), transition, Fig. 7 (reversal), reversal paragraph, Closing the Gap, Conclusion. Fig. 5 is set at 0.88 of the text width, Fig. 6 at 0.42 and Fig. 7 at 0.6, so that Figs. 5, 6 and 7 all sit on page 7 with their text and the reversal paragraph opens page 8. The PDF is 10 pages.
+
+## 5. 27 October follow-up (Skyler)
+
+Applied after Frank's items, on the same files, and rebuilt.
+
+| Where | Was | Now |
+|---|---|---|
+| Fig. 6 caption | "Another example of color permutation, on the cable-winding clip: source (left) and variant with the desk and shelf recolored blue (right)." | "Another example of color permutation, on the cable-winding clip: source (left) and variant (right)." Also changed in `alt-text.csv`. |
+| Paragraph after Fig. 6 | "Fig. 6 shows the same kind of appearance change on the cable-winding clip: the desk and shelf are recolored and the hands and cable are preserved. We used this clip to test a change of a different kind." | "Fig. 6 illustrates another appearance change, this time on the color of background items. When we prompt to permute the color of some background items within the cable-winding clip from black to blue, we see the desk, shelf, hands and cable are preserved, while some of the black colored items are altered." |
+
+The PDF is still 10 pages with Figs. 5 and 6 on page 7 and Fig. 7 opening page 8 with the Closing the Gap section.
